@@ -8,6 +8,10 @@ public class ShoppingCart {
         items.add(new CartItem(unitPrice, quantity));
     }
 
+    public List<CartItem> getItems() {
+        return items;
+    }
+
     public double getTotalValue() {
         return items.stream()
             .mapToDouble(CartItem::getTotalPrice)
